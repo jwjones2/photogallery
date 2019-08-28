@@ -2,10 +2,15 @@
 <app-header></app-header>
 
 <!-- Bulma homepage -->
-<app-home *ngIf="show"></app-home>
+<div *ngIf="show; else elseBlock">
+    <app-home></app-home>
+</div>
+<ng-template #elseBlock>
+    <!-- routes will be rendered here -->
+    <router-outlet></router-outlet>
+</ng-template>
 
-<!-- routes will be rendered here -->
-<router-outlet></router-outlet>
+<h1>--{{path}}--</h1>
 
 <!-- footer -->
 <app-footer></app-footer>
