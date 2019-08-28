@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('events', 'EventController');
+Route::resource('groups', 'GroupController');
