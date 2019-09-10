@@ -8,8 +8,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { EventComponent } from './components/event/event.component';
 import { GroupComponent } from './components/group/group.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'; 
 import { GroupsComponent } from './components/groups/groups.component';
+import { HttpErrorHandler } from './http-error-handler.service';
+import { MessageService } from './message.service';
+import { GroupDetailComponent } from './components/group-detail/group-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,18 @@ import { GroupsComponent } from './components/groups/groups.component';
     HomeComponent,
     EventComponent,
     GroupComponent,
-    GroupsComponent
+    GroupsComponent,
+    GroupDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    HttpErrorHandler,
+    MessageService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

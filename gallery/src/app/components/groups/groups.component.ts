@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Group, ApiService } from 'src/app/api.service';
+import { GroupsService } from './groups.service';
+import { Group } from './group';
 
 @Component({
   selector: 'app-groups',
   templateUrl: './groups.component.html',
+  providers: [GroupsService],
   styleUrls: ['./groups.component.css']
 })
 export class GroupsComponent implements OnInit {
   groups: Group[];
   
-  constructor(private apiService: ApiService) { }
+  constructor(private groupsService: GroupsService) { }
 
   ngOnInit() {
-    this.apiService.getGroups()
-      // clone the data object, using its known Config shape
-      .subscribe((data: Group[]) => this.groups = { ...data });
+    this.groupsService.getGroups()
+      .subscribe(groups => this.groups = groups);
   }
 
 }

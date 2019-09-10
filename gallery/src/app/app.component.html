@@ -5,12 +5,17 @@
 <div *ngIf="show; else elseBlock">
     <app-home></app-home>
 </div>
+
+<div class="h-full w-full flex content-center justify-center items-center">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-10">
+      Button
+    </button>
+  </div>
+  
 <ng-template #elseBlock>
     <!-- routes will be rendered here -->
     <router-outlet></router-outlet>
 </ng-template>
-
-<h1>--{{path}}--</h1>
 
 <!-- footer -->
 <app-footer></app-footer>

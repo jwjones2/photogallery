@@ -1,0 +1,12 @@
+<h3>Top Heroes</h3>
+<div class="columns">
+    <div class="column" *ngFor="let hero of heroes">
+        <div class="card is-gray">
+            <a routerLink="/detail/{{hero.id}}">
+                <div class="card-header">
+                    {{hero.name}}
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,20 @@
-<div *ngFor="let group of groups">
-  <h2>{{group.name}}</h2>
+<div class="columns is-multiline is-5">
+<div class="card column" *ngFor="let group of groups">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{group.name}}</p>
+      </div>
+    </div>
 
-    <p>
+    <div class="content">
       {{group.description}}
-    </p>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">Show Events</a>
+    <a href="#" class="card-footer-item">Edit</a>
+    <a href="#" class="card-footer-item">Delete</a>
+  </footer>
+</div>
 </div>
