@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Gayathri|Parisienne|Poppins&display=swap');
+// Font classes for use throughout script
+.font-main{ font-family: 'Gayathri', sans-serif; }
+.font-alt{ font-family: 'Poppins', sans-serif; }
+.font-cursive{ font-family: 'Parisienne', cursive; }
+
+// TAILWIND
 @tailwind base;
 
 @tailwind components;
