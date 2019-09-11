@@ -1,20 +1,18 @@
-<div class="columns is-multiline is-5">
-<div class="card column" *ngFor="let group of groups">
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">{{group.name}}</p>
-      </div>
+<div class="flex">
+  <div *ngFor="let group of groups" class="max-w-sm rounded overflow-hidden shadow-lg bg-pale ml-4">
+    <a routerLink="/group/{{group.id}}">
+      <img class="w-full" src="assets/images/backgrounds/flower.jpg" alt="">
+    </a>
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{{group.name}}</div>
+      <p class="text-gray-700 text-base">
+        {{group.description}}
+      </p>
     </div>
-
-    <div class="content">
-      {{group.description}}
+    <div class="px-6 py-4">
+      <span class="inline-block bg-light rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
+      <span class="inline-block bg-light rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
+      <span class="inline-block bg-light rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
     </div>
   </div>
-  <footer class="card-footer">
-    <a href="#" class="card-footer-item">Show Events</a>
-    <a href="#" class="card-footer-item">Edit</a>
-    <a href="#" class="card-footer-item">Delete</a>
-  </footer>
-</div>
 </div>
