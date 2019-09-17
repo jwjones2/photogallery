@@ -13,6 +13,7 @@ import { GroupsComponent } from './components/groups/groups.component';
 import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
 import { GroupDetailComponent } from './components/group-detail/group-detail.component';
+import { GroupEditComponent } from './components/group-edit/group-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GroupDetailComponent } from './components/group-detail/group-detail.com
     EventComponent,
     GroupComponent,
     GroupsComponent,
-    GroupDetailComponent
+    GroupDetailComponent,
+    GroupEditComponent
   ],
   imports: [
     BrowserModule,

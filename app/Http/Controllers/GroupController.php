@@ -47,7 +47,7 @@ class GroupController extends Controller
      */
     public function show($id)
     {
-        //
+        return Group::find($id);
     }
 
     /**

@@ -3,19 +3,26 @@ import { HttpClient } from '@angular/common/http';
 import { Group } from "./group";
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 
-const API_URL: string = 'http://localhost:8000/';
+// we can now access environment.apiUrl
+const API_URL = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
 })
-export class GroupsService {
-    groupsUrl = 'api/groups';  // URL to web api
+export class GroupService {
+    groupsUrl = '/groups';  // URL to web api
 
     constructor(
         private http: HttpClient
     )
     {}
+
+  getGroup ( id ): Observable<Group> {
+    return this.http
+      .get<Group>(API_URL + this.groupsUrl + '/' + id);
+  } 
 
   getGroups (): Observable<Group[]> {
     return this.http
