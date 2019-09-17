@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'event', component: EventComponent },
   { path: 'group', component: GroupComponent },
   { path: 'group/:id', component: GroupDetailComponent },
-  { path: 'group-edit/:id', component: GroupEditComponent }
+  { path: 'group-edit/:id', component: GroupEditComponent },
   { path: 'groups', component: GroupsComponent }
 ];
 

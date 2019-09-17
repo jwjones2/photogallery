@@ -14,6 +14,9 @@ import { HttpErrorHandler } from './http-error-handler.service';
 import { MessageService } from './message.service';
 import { GroupDetailComponent } from './components/group-detail/group-detail.component';
 import { GroupEditComponent } from './components/group-edit/group-edit.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { GroupEditComponent } from './components/group-edit/group-edit.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     HttpErrorHandler,
