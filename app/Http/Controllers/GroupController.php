@@ -58,7 +58,7 @@ class GroupController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -70,7 +70,12 @@ class GroupController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $group = Group::find($id);
+        $group->name = $request->input('name');
+        $group->description = $request->input('description');
+        $group->save();
+
+        return group;
     }
 
     /**

@@ -30,17 +30,7 @@ export class GroupService {
       .pipe(map(response => response['data']));
   }
 
-  updateGroup (): boolean {
-    return this.http.patch("http://127.0.0.1:3000/customers/1",
-    {
-      "email":  "newcustomer001@email.com"
-    })
-    .subscribe( data  => {
-        data;
-    },
-      error  => {
-        return false;
-      }
-    );
+  public updateGroup(group: Group): Observable<Group> {
+    return this.http.put<Group>(`${API_URL + this.groupsUrl}/${group.id}`,group);
   }
 }

@@ -21,7 +21,7 @@ export class GroupDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.id = +params.get("id");
     })
-    
+
     this.groupService.getGroup(this.id)
       .subscribe(group => this.group = group);
 
@@ -37,7 +37,11 @@ export class GroupDetailComponent implements OnInit {
   }
 
   updateGroup() {
-    this.toastr.warning("Working");
+    this.toastr.warning("Updating...");
+
+    // call group service to update the group
+    this.groupService.updateGroup(this.group)
+        .subscribe(group => this.group = group);
   }
 
 }
