@@ -3,7 +3,7 @@
       <img class="w-full" src="assets/images/backgrounds/flower.jpg" alt="">
       <div class="px-6 py-4">
         <input class="font-bold text-xl mb-2" [ngClass]="{'bg-white': edit, 'bg-pale': !edit}" [(ngModel)]="group.name" [disabled]="!edit" />
-        <textarea class="text-gray-700 text-base" [ngClass]="{'bg-white': edit, 'bg-pale': !edit}" [(ngModel)]="group.description" [disabled]="!edit">
+        <textarea class="text-gray-700 text-base w-full" [ngClass]="{'bg-white': edit, 'bg-pale': !edit}" [(ngModel)]="group.description" [disabled]="!edit">
         </textarea>
       </div>
       <div class="px-6 py-4">

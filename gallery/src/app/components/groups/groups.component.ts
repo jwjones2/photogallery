@@ -18,4 +18,8 @@ export class GroupsComponent implements OnInit {
       .subscribe(groups => this.groups = groups);
   }
 
+  addGroup( name, description ) {
+    alert(name);
+  }
+
 }
