@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.3",
     "angular-toastr": "^2.1.1",
     "bulma": "^0.7.5",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "ngx-toastr": "^10.2.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
